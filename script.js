@@ -1,4 +1,4 @@
-
+TESTING GIT......
 
 var maxLength = '10'; //max digits in display
 var firstNum = '0'; 
@@ -40,6 +40,7 @@ function displayOperator(operator) { //OPERATOR button has been pushed, activate
 		operation = operator; // OPERATOR (+ , - , * , /) is now stored in variable OPERATION
 	}else if(wasEqualPressed){ // if equal sign was pressed previously
 		operation = operator;
+		wasEqualPressed = false;
 	}else { //operation button has been pushed AFTER first time, and = hasn't been pressed
 		displayAnswer(false);
 		operation = operator;
