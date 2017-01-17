@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>Cassie's Javascript Calculator Challenge</title>
+        <link rel="stylesheet" type="text/css" href="styles.css">
+    </head>
+
+    <body>
+		<form name="Calculator">
+			<table> 
+				<tr>
+		    		<td>
+		      		<input type="text" name="Display" readonly="readonly">
+		   			</td>
+		    	</tr>  
+		    <table>
+			    <tr>
+					<td><input type="button" value="7" name="seven" OnClick="displayDigit('7')"></td>
+					<td><input type="button" value="8" name="eight" OnClick="displayDigit('8')"></td>
+					<td><input type="button" value="9" name="nine" OnClick="displayDigit('9')"></td>
+					<td><input type="button" value="&times;" name="multiply" onClick="displayOperator('*')"></td>
+				</tr>
+				<tr>
+					<td><input type="button" value="4" name="four" OnClick="displayDigit('4')"></td>
+					<td><input type="button" value="5" name="five" OnClick="displayDigit('5')"></td>
+					<td><input type="button" value="6" name="six" OnClick="displayDigit('6')"></td>
+					<td><input type="button" value="&divide;" name="divide" onClick="displayOperator('/')"></td>
+				</tr>
+				<tr>
+					<td><input type="button" value="1" name="one" OnClick="displayDigit('1')"></td>
+					<td><input type="button" value="2" name="two" OnClick="displayDigit('2')"></td>
+					<td><input type="button" value="3" name="three" OnClick="displayDigit('3')"></td>
+					<td><input type="button" value="+" name="add" onClick="displayOperator('+')"></td>
+				</tr>
+				<tr> 
+					<td><input type="button" value="0" name="zero" OnClick="displayDigit('0')"></td>
+					<td><input id = "decimal" type="button" value="." name="decimal" OnClick="displayDigit('.')"></td>
+					<td><input type="button" value="c" name="clear" OnClick="displayClear()"></td>
+					<td><input type="button" value="-" name="subtract" onClick="displayOperator('-')"></td>
+				</tr>
+				<tr>
+					<td><input type="button" value="=" name="equals" onClick="displayAnswer(true)"></td>
+					<td colspan="10"><p>Cassie's JavaScript Calculator</p></td>
+				</tr>
+		    </table>	
+			</table>
+		</form>	
+	<script type="text/javascript" src="script.js"></script>
+	</body>
+</html>
+
