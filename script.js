@@ -1,4 +1,12 @@
-TESTING GIT......
+
+// 2*3+1 = (7)
+// (clear)
+// 2*3+1= (4)
+
+// firstNum 
+// operation *
+// secondNum 2
+
 
 var maxLength = '10'; //max digits in display
 var firstNum = '0'; 
@@ -23,6 +31,7 @@ function displayDigit(number){ //If a numerical digit is pushed, run this functi
 			document.Calculator.Display.value = firstNum;
 		}
 	}
+	console.log(firstNum, secondNum, operation, answer, wasEqualPressed);
 }
 
 //IF DECIMAL IS PUSHED RUN THIS:
@@ -40,7 +49,6 @@ function displayOperator(operator) { //OPERATOR button has been pushed, activate
 		operation = operator; // OPERATOR (+ , - , * , /) is now stored in variable OPERATION
 	}else if(wasEqualPressed){ // if equal sign was pressed previously
 		operation = operator;
-		wasEqualPressed = false;
 	}else { //operation button has been pushed AFTER first time, and = hasn't been pressed
 		displayAnswer(false);
 		operation = operator;
@@ -53,6 +61,7 @@ function displayOperator(operator) { //OPERATOR button has been pushed, activate
 //IF = IS PUSHED RUN THIS
 function displayAnswer(flag) { 
 	wasEqualPressed = flag;
+	console.log(firstNum, secondNum, operation, answer, wasEqualPressed);
 	var firstNumConvert = parseFloat(firstNum); //convert the strings into numbers
 	var secondNumConvert = parseFloat(secondNum); 
 
@@ -94,9 +103,14 @@ function displayClear() { // when clean button pushed...
 	secondNum = '0';
 	operation = '0';
 	answer = 0;
+	wasEqualPressed = false; // when clear is pressed, wasEqualPressed = false.
 
 	document.Calculator.Display.value = firstNum;
 }
+
+
+
+
 
 
 
